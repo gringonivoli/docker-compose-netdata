@@ -8,7 +8,7 @@ services:
     cap_add:
       - SYS_PTRACE
     security_opt:
-      - apparmor: unconfined
+      - apparmor:unconfined
     volumes:
       - /proc:/hosts/proc:ro
       - /sys:/host/sys:ro
