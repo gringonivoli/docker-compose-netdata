@@ -2,7 +2,7 @@ version: '3'
 services:
   netdata:
     image: netdata/netdata
-    hostname: 0.0.0.0
+    hostname: pione
     ports:
       - 19999:19999
     cap_add:
@@ -13,3 +13,4 @@ services:
       - /proc:/hosts/proc:ro
       - /sys:/host/sys:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./health_alarm_notify.conf:/etc/netdata/health_alarm_notify.conf
